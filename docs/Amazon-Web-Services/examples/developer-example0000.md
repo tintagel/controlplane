@@ -17,9 +17,9 @@ This IAM Access Policy uses five (5) policy blocks to accomplish the following:
 4. Explicitly grant the `iam:PassRole` action on a short list of IAM Roles for EC2.
 5. Grant all actions that are not IAM actions that have not otherwise been denied.
 
-This will require a separate role and workflow to to the IAM Role engineering to provide the IAM Roles that may be needed by a particular project, but will
+This will require a separate role and workflow for the IAM Role engineering to provide the IAM Roles that may be needed by a particular project. Ideally, This workflow leverages existing deployment automation, simply with a separately managed pipeline that provides the proper oversight of the roles being developed and deployed.
 
-###
+### Policy example
 
 This policy should be attached to a Role as an inline or managed policy.  A managed policy is probably better for a variety of reasons that are likely explored elsewhere.
 
